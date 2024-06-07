@@ -6,19 +6,17 @@ Reactfolio is a modern and customizable personal portfolio web template built us
 <img src="https://i.imgur.com/ZWPO61A.jpeg" alt="Reactfolio" />
 </center>
 
-Live demo here: <a href="https://vikramaditya-rho.vercel.app/" target="_blank">reactfolio.tharindu.dev</a>
-<!-- <br/> -->
-<!-- Readme here: <a href="https://tharindu.dev/portfolio/reactfolio/" target="_blank">tharindu.dev/portfolio/reactfolio/</a> -->
+Live demo here: <a href="https://vikramaditya-rho.vercel.app/" target="_blank">Vikramaditya.dev</a>
 
 -   [Features](#-features)
--   [Getting started](#-getting-started)
+<!-- -   [Getting started](#-getting-started)
 -   [Installation and Setup Instructions](#-installation-and-setup-instructions)
 -   [Folder structure](#-folder-structure)
 -   [Configurations](#-configurations)
 -   [Google Analytics](#-google-analytics)
 -   [Building the React App](#-building-the-react-app)
 -   [FAQ](#-faq)
--   [Contribution](#-contribution)
+-   [Contribution](#-contribution) -->
 
 ## 📙 Features
 
@@ -31,9 +29,7 @@ Live demo here: <a href="https://vikramaditya-rho.vercel.app/" target="_blank">r
 -   📱 Fully Responsive
 -   🛠 Easy configurations
 
-## 📚 Getting started
 
-Clone down this repository. You will need `NodeJS` and `git` installed globally on your machine.
 
 ## 🛠 Installation and Setup Instructions
 
@@ -53,17 +49,9 @@ The page will reload if you make edits.
     -   `/src/data`: configurations of the web app.
     -   `/src/pages`: pages that include in the web app.
 
-## ⚙️ Configurations
 
-Since this is a public and open source project, you can make any changes to it. If you are a ReactJS developer you can do it easily. But if you are a beginner, I have extracted the configurable data into a single directory, so you can edit the files in that directory to configure the entire web application.
 
-Directory: `/src/data/`
-
--   `user.js`
-
-    From this you can change the content of each page of the web application.
-
--   `articles.js`
+<!-- -   `articles.js`
 
     From this you can add your articles to the web application.
 
@@ -106,7 +94,7 @@ Directory: `/src/data/`
             		),
             	};
             }
-            ```
+            ``` -->
 
         3. In the last lines you will see an array to which you need to add your new `articles` function.
 
@@ -162,49 +150,7 @@ Directory: `/src/data/`
     }
     ```
 
-## 📈 Google Analytics
 
-Add your Google Analytics 4 MEASUREMENT ID to `/src/data/tracking.js`.
-
-How to find the Google Analytics 4 MEASUREMENT ID ?
-
-[https://support.google.com/analytics/answer/9539598?hl=en](https://support.google.com/analytics/answer/9539598?hl=en)
-
-## 🚀 Building the React App
-
-To build the React app, you can use the `npm run build` command. This will create a production-ready build of your app in the `build/` directory.
-
-Here are the steps to follow:
-
-1. Open a terminal window and navigate to the root directory of your React app.
-2. Run the `npm run build` command to create a production build of your app. This will generate a static bundle of your app in the `build/` directory.
-3. Copy the contents of the `build/` directory to your server's public directory. You can do this using an FTP client or by running a command like `scp` to transfer the files to your server. Make sure to replace `example.com` and `/var/www/html` with your server's domain name and public directory, respectively:
-
-    ```bash
-    scp -r build/* user@example.com:/var/www/html
-    ```
-
-4. Your portfolio app should now be accessible from your server's domain name. You can verify this by opening a web browser and navigating to http://example.com (replace example.com with your server's domain name).
-
-That's it! Your React portfolio app should now be up and running on your server. Note that you may need to configure your server's web server (e.g., Apache or Nginx) to serve the index.html file in the build/ directory as the default page for your domain.
-
-## 🤔 FAQ
-
-**Q1. Subpages can only be accessed through links on the homepage or navigation bar, but those pages are not accessible through direct links.**
-
-If you are using Apache as your web server, you can insert this into your .htaccess file:
-
-```c
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
-</IfModule>
-```
 
 ## 🌱 Contribution
 
